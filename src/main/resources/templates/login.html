@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #4b0082;
+            /* color: #000000; */
+            font-weight: 900;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4b0082;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7513bb;
+            font-weight: 900;
+        }
+        
+        img{
+            width: 300px;
+            height: 100px;
+            margin-bottom: 4%;
+            border: 4px #ccc;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+<!-- Dans votre page de connexion -->
+<p th:if="${param.logout}" class="alert alert-success">Vous vous êtes déconnecté avec succès.</p>
+
+    <div id="logo">
+        <!-- Ajoutez ici le code pour afficher votre logo -->
+        <!-- <img src="uisj.png" alt="" srcset=""> -->
+    </div>
+    <!-- <h2>Login</h2> -->
+    <form action="/login" method="post">
+        <div id="logo">
+            <!-- Ajoutez ici le code pour afficher votre logo -->
+            <img src="uisj.png" alt="" srcset="">
+        </div>
+        <label for="id">Nom d'utilisateur</label>
+        <input type="text" id="id" name="id" required>
+        <br>
+        <label for="motDePasse">Mot de passe</label>
+        <input type="password" id="motDePasse" name="motDePasse" required>
+        <br>
+        <button type="submit">Connexion</button>
+    </form>
+</body>
+</html>
